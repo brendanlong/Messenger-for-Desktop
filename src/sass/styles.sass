@@ -94,11 +94,6 @@ section#header
     margin-top: 70px
     margin-bottom: 12px
 
-  .notice
-    color: rgba(0, 0, 0, 0.6)
-    display: block
-    font-size: 12px
-
 section#platforms
   padding-bottom: 70px
 
@@ -349,3 +344,31 @@ section.legal
 
   h2.legal.title
     color: white
+
+.downloads-container
+  svg
+    height: 20px
+    margin-right: 5px
+    position: relative
+    bottom: -2px
+
+  .osx svg
+    bottom: -1px
+
+  .button
+    font-size: 20px
+    text-transform: none
+
+  .winDownloadBtn, .macDownloadBtn, .otherPlatformsDlLink
+    display: none
+
+.notices
+  display: block
+
+  .notice
+    color: rgba(0, 0, 0, 0.6)
+    font-size: 12px
+
+  a .notice
+    color: $blue
+    margin-right: 5px

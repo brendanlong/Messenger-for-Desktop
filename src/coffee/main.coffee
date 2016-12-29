@@ -8,4 +8,19 @@
 
   # Anchor smooth scrolling
   smoothScroll.init()
+
+  # Personalize the download button
+  if document.querySelectorAll
+    setDisplay = (elemsQuery, displayMode) ->
+      document.querySelectorAll(elemsQuery).forEach (elem) ->
+        elem.style.display = displayMode
+
+    if (window.navigator.userAgent.indexOf('Windows') != -1)
+      setDisplay '.winDownloadBtn', 'inline-block'
+      setDisplay '.otherPlatformsDlLink', 'inline'
+      setDisplay '.redirDownloadBtn', 'none'
+    if (window.navigator.userAgent.indexOf('Mac') != -1)
+      setDisplay '.macDownloadBtn', 'inline-block'
+      setDisplay '.otherPlatformsDlLink', 'inline'
+      setDisplay '.redirDownloadBtn', 'none'
 )()
